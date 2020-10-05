@@ -6,6 +6,8 @@ from telethon.tl.types import ChannelParticipantsAdmins
 DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "Unknown"
 PM_IMG = "https://telegra.ph/file/492098bb86cf553160543.jpg"
 pm_caption = "`Yo Bitch I am Alive🖕🖕 `"
+pm_caption += "My Master @Mikechk"
+
 
 #@command(outgoing=True, pattern="^.alive$")
 @borg.on(admin_cmd(pattern=r"alive"))
