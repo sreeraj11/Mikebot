@@ -33,7 +33,7 @@ USER_BOT_NO_WARN = ("`Hello ! This is` **MIKE'S**\n"
 
 
 if Var.PRIVATE_GROUP_ID is not None:
-    @borg.on(admin_cmd(pattern="approve ?(.*)"))
+    @borg.on(admin_cmd(pattern="app ?(.*)"))
     async def approve_p_m(event):
         if event.fwd_from:
            return
@@ -87,7 +87,7 @@ if Var.PRIVATE_GROUP_ID is not None:
                 await asyncio.sleep(3)
                 await event.client(functions.contacts.BlockRequest(chat.id))
 
-    @command(pattern="^.disapprove ?(.*)")
+    @command(pattern="^.dis ?(.*)")
     async def approve_p_m(event):
         if event.fwd_from:
             return
@@ -105,7 +105,7 @@ if Var.PRIVATE_GROUP_ID is not None:
                 
     
 
-    @command(pattern="^.listapproved")
+    @command(pattern="^.listapp")
     async def approve_p_m(event):
         if event.fwd_from:
             return
